@@ -21,27 +21,35 @@
     <script>
         button.onclick = function(){
 
+            // Создаём новый XMLHttpRequest-объект
             let req = new XMLHttpRequest();
             let url = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3&fbclid=IwAR28vaK18w5_ZDwhGTzyv4PCL0qA58u3ISu6Na5ntYWFA788MHC0cp3fkww';
 
+            // Настраиваем его: GET-запрос по URL
             req.open('GET', url);
 
+            // Отсылаем запрос
             req.send();
 
+            // Функция для добавления новых элементов
             let createDiv = function(text){
                 let div = document.createElement('div');
                 div.innerHTML = text;
                 document.getElementById('right').append(div);
             }
 
+            // Этот код сработает после того, как мы получим ответ сервера
             req.onload = function() {
 
+                // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
                 if(req.status != 200){
                     createDiv ('Error: ' + req.status);
                 }
 
+                // если всё ОК, парсим ответ
                 let curr = JSON.parse(req.response);
 
+                    // выводим результат
                     createDiv('<h2>Get request without server</h2>');
 
                     for(let i=0; i<curr.length; i++){
