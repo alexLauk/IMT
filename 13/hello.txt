@@ -1,0 +1,2 @@
+Hi I am Alex!
+I add string in the end of file
