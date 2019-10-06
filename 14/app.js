@@ -12,10 +12,10 @@ http.createServer(function(req, res){
         res.end();
     }
     else if(req.url ==='/about'){
-        res.write('<h2>About<h2>')
-        res.write('Url: ' + req.url);
-        res.write('Type of request: ' + req.method);
-        res.write('User-Agent: ' + req.headers['user-agent']);
+        //res.write('<h2>About<h2>')
+        res.write('<p>Url: ' + req.url +'</p>');
+        res.write('<p>Type of request: ' + req.method +'</p>');
+        res.write('<p>User-Agent: ' + req.headers['user-agent'] +'</p>');
         res.end();
     }
     else if(req.url === '/currency'){
