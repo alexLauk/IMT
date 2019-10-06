@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get request without server</title>
+    <meta charset="utf-8" />
+    <style>
+        #left{width:50%;height:500px;float:left;text-align: center;}
+        #right{width:50%;height:500px;overflow:auto;text-align: center;}
+        #footer{text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="left">
+        <h2>Get request with server</h2>
+        <div>{Currency}</div>
+    </div>
+    <div id="right"></div>
+    <div id="footer">
+        <input type='submit' id='button' value='Get currency without server'/>
+    </div>
+    <script>
+        button.onclick = function(){
+
+            let req = new XMLHttpRequest();
+            let url = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3&fbclid=IwAR28vaK18w5_ZDwhGTzyv4PCL0qA58u3ISu6Na5ntYWFA788MHC0cp3fkww';
+
+            req.open('GET', url);
+
+            req.send();
+
+            let createDiv = function(text){
+                let div = document.createElement('div');
+                div.innerHTML = text;
+                document.getElementById('right').append(div);
+            }
+
+            req.onload = function() {
+
+                if(req.status != 200){
+                    createDiv ('Error: ' + req.status);
+                }
+
+                let curr = JSON.parse(req.response);
+
+                    createDiv('<h2>Get request without server</h2>');
+
+                    for(let i=0; i<curr.length; i++){
+                        createDiv('<p>Curency: ' + curr[i].ccy + ' - UAH<p>');
+                        createDiv('<p>Buy: ' + curr[i].buy + '<p>');
+                        createDiv('<p>Sale: ' + curr[i].sale + '<p>');
+                    }
+            };
+        }
+    </script>
+</body>
+<html>
