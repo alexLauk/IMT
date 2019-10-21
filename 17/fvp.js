@@ -2,7 +2,7 @@
 class Fvp{
 
     constructor (){
-        this.RegExps = {
+        this.pattern = {
             name: /^[a-zа-я ,.'-]+$/i,
             date: /^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/,
             email: /^\w{4,10}\@[a-z]{4,10}\.[a-z]{2,}$/i,
@@ -12,9 +12,9 @@ class Fvp{
     };
 
     validation(value, field){
-        for (let key in this.RegExps){
+        for (let key in this.pattern){
             if(key === field){
-                return this.RegExps[key].test(value)
+                return this.pattern[key].test(value)
             }
         }
     };
