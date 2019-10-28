@@ -1,0 +1,619 @@
+doctype html
+// [if (gte IE 9)|!(IE)] <!
+// <![endif]
+head
+  // =====  BASIC PAGE NEEDS  =====
+  meta(charset='utf-8')
+  title OYEENok E-commerce Bootstrap Template
+  // =====  SEO MATE  =====
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='description' content='')
+  meta(name='keywords' content='')
+  meta(name='distribution' content='global')
+  meta(name='revisit-after' content='2 Days')
+  meta(name='robots' content='ALL')
+  meta(name='rating' content='8 YEARS')
+  meta(name='Language' content='en-us')
+  meta(name='GOOGLEBOT' content='NOARCHIVE')
+  // =====  MOBILE SPECIFICATION  =====
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+  meta(name='viewport' content='width=device-width')
+  // =====  CSS  =====
+  link(rel='stylesheet' type='text/css' href='public/css/font-awesome.min.css')
+  link(rel='stylesheet' type='text/css' href='/css/bootstrap.min.css')
+  link(rel='stylesheet' type='text/css' href='/css/style.css')
+  link(rel='stylesheet' type='text/css' href='/css/magnific-popup.css')
+  link(rel='stylesheet' type='text/css' href='/css/owl.carousel.css')
+  link(rel='shortcut icon' href='/images/favicon.png')
+  link(rel='apple-touch-icon' href='/images/apple-touch-icon.png')
+  link(rel='apple-touch-icon' sizes='72x72' href='/images/apple-touch-icon-72x72.png')
+  link(rel='apple-touch-icon' sizes='114x114' href='/images/apple-touch-icon-114x114.png')
+// =====  LODER  =====
+.loder
+.wrapper
+  // =====  HEADER START  =====
+  header#header
+    .header-top
+      .container
+        .row
+          .col-xs-12.col-sm-4
+            .header-top-left
+              .contact
+                a(href='#') Call now !
+                span.hidden-xs.hidden-sm.hidden-md +91 987-654-321
+          .col-xs-12.col-sm-8
+            ul.header-top-right.text-right
+              li.account
+                a(href='login.html') My Account
+              li.language.dropdown
+                span#dropdownMenu1.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' role='button')
+                  | Language
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') English
+                  li
+                    a(href='#') French
+                  li
+                    a(href='#') German
+              li.currency.dropdown
+                span#dropdownMenu12.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' role='button')
+                  | Currency
+                  span.caret
+                ul.dropdown-menu(aria-labelledby='dropdownMenu12')
+                  li
+                    a(href='#') &euro; Euro
+                  li
+                    a(href='#') &pound; Pound Sterling
+                  li
+                    a(href='#') $ US Dollar
+    .header
+      .container
+        .row
+          .col-xs-12.col-sm-4
+            .main-search.mt_40
+              input#search-input.form-control.input-lg(name='search' value='' placeholder='Search' autocomplete='off' type='text')
+              span.input-group-btn
+                button.btn.btn-default.btn-lg(type='button')
+                  i.fa.fa-search
+          .navbar-header.col-xs-6.col-sm-4
+            a.navbar-brand(href='index.html')
+              img(alt='OYEENok' src='images/logo.png')
+          .col-xs-6.col-sm-4.shopcart
+            #cart.btn-group.btn-block.mtb_40
+              button.btn(type='button' data-target='#cart-dropdown' data-toggle='collapse' aria-expanded='true')
+                span#shippingcart Shopping cart
+                span#cart-total items (0)
+            #cart-dropdown.cart-menu.collapse
+              ul
+                li
+                  table.table.table-striped
+                    tbody
+                      tr
+                        td.text-center
+                          a(href='#')
+                            img(src='images/product/70x84.jpg' alt='iPod Classic' title='iPod Classic')
+                        td.text-left.product-name
+                          a(href='#') MacBook Pro
+                          span.text-left.price $20.00
+                          input.cart-qty(name='product_quantity' min='1' value='1' type='number')
+                        td.text-center
+                          a.close-cart
+                            i.fa.fa-times-circle
+                      tr
+                        td.text-center
+                          a(href='#')
+                            img(src='images/product/70x84.jpg' alt='iPod Classic' title='iPod Classic')
+                        td.text-left.product-name
+                          a(href='#') MacBook Pro
+                          span.text-left.price $20.00
+                          input.cart-qty(name='product_quantity' min='1' value='1' type='number')
+                        td.text-center
+                          a.close-cart
+                            i.fa.fa-times-circle
+                li
+                  table.table
+                    tbody
+                      tr
+                        td.text-right
+                          strong Sub-Total
+                        td.text-right $2,100.00
+                      tr
+                        td.text-right
+                          strong Eco Tax (-2.00)
+                        td.text-right $2.00
+                      tr
+                        td.text-right
+                          strong VAT (20%)
+                        td.text-right $20.00
+                      tr
+                        td.text-right
+                          strong Total
+                        td.text-right $2,122.00
+                li
+                  form(action='cart_page.html')
+                    input.btn.pull-left.mt_10(value='View cart' type='submit')
+                  form(action='checkout_page.html')
+                    input.btn.pull-right.mt_10(value='Checkout' type='submit')
+        nav.navbar
+          p Menu
+          button.navbar-toggle(type='button' data-toggle='collapse' data-target='.js-navbar-collapse')
+            span.i-bar
+              i.fa.fa-bars
+          .collapse.navbar-collapse.js-navbar-collapse
+            ul#menu.nav.navbar-nav
+              li
+                a(href='index.html') Home
+              li
+                a(href='category_page.html') Shop
+              li
+                a(href='blog_page.html') Blog
+              li.dropdown.mega-dropdown
+                a.dropdown-toggle(href='#' data-toggle='dropdown') Collection
+                ul.dropdown-menu.mega-dropdown-menu.row
+                  li.col-md-3
+                    ul
+                      li.dropdown-header Women&apos;s
+                      li
+                        a(href='#') Unique Features
+                      li
+                        a(href='#') Image Responsive
+                      li
+                        a(href='#') Auto Carousel
+                      li
+                        a(href='#') Newsletter Form
+                      li
+                        a(href='#') Four columns
+                      li
+                        a(href='#') Four columns
+                      li
+                        a(href='#') Good Typography
+                  li.col-md-3
+                    ul
+                      li.dropdown-header Man&apos;s
+                      li
+                        a(href='#') Unique Features
+                      li
+                        a(href='#') Image Responsive
+                      li
+                        a(href='#') Four columns
+                      li
+                        a(href='#') Auto Carousel
+                      li
+                        a(href='#') Newsletter Form
+                      li
+                        a(href='#') Four columns
+                      li
+                        a(href='#') Good Typography
+                  li.col-md-3
+                    ul
+                      li.dropdown-header Children&apos;s
+                      li
+                        a(href='#') Unique Features
+                      li
+                        a(href='#') Four columns
+                      li
+                        a(href='#') Image Responsive
+                      li
+                        a(href='#') Auto Carousel
+                      li
+                        a(href='#') Newsletter Form
+                      li
+                        a(href='#') Four columns
+                      li
+                        a(href='#') Good Typography
+                  li.col-md-3
+                    ul
+                      li#myCarousel.carousel.slide(data-ride='carousel')
+                        .carousel-inner
+                          .item.active
+                            a(href='#')
+                              img.img-responsive(src='images/menu-banner1.jpg' alt='Banner1')
+                          // End Item
+                          .item
+                            a(href='#')
+                              img.img-responsive(src='images/menu-banner2.jpg' alt='Banner1')
+                          // End Item
+                          .item
+                            a(href='#')
+                              img.img-responsive(src='images/menu-banner3.jpg' alt='Banner1')
+                          // End Item
+                        // End Carousel Inner
+                      // /.carousel
+              li.dropdown
+                a.dropdown-toggle(href='#' data-toggle='dropdown') Pages
+                ul.dropdown-menu
+                  li
+                    a(href='contact_us.html') Contact us
+                  li
+                    a(href='cart_page.html') Cart
+                  li
+                    a(href='checkout_page.html') Checkout
+                  li
+                    a(href='product_detail_page.html') Product Detail Page
+                  li
+                    a(href='single_blog.html') Single Post
+              li
+                a(href='about.html') About us
+          // /.nav-collapse
+  // =====  HEADER END  =====
+  // =====  CONTAINER START  =====
+  .container
+    .row
+      // =====  BANNER STRAT  =====
+      .col-sm-12
+        .breadcrumb.ptb_20
+          h1 About Us
+          ul
+            li
+              a(href='index.html') Home
+            li.active About Us
+      // =====  BREADCRUMB END=====
+      #column-left.col-sm-4.col-lg-3.hidden-xs
+        #category-menu.navbar.collapse.in.mb_40(aria-expanded='true' style='' role='button')
+          .nav-responsive
+            .heading-part
+              h2.main_title Top category
+            ul.nav.main-navigation.collapse.in
+              li
+                a(href='#') Appliances
+              li
+                a(href='#') Mobile Phones
+              li
+                a(href='#') Tablet PC &amp; Accessories
+              li
+                a(href='#') Consumer Electronics
+              li
+                a(href='#') Computers &amp; Networking
+              li
+                a(href='#') Electrical &amp; Tools
+              li
+                a(href='#') Apparel
+              li
+                a(href='#') Bags &amp; Shoes
+              li
+                a(href='#') Toys &amp; Hobbies
+              li
+                a(href='#') Watches &amp; Jewelry
+              li
+                a(href='#') Home &amp; Garden
+              li
+                a(href='#') Health &amp; Beauty
+              li
+                a(href='#') Outdoors &amp; Sports
+        .left_banner.left-sidebar-widget.mt_30.mb_40
+          a(href='#')
+            img.img-responsive(src='images/left1.jpg' alt='Left Banner')
+      .col-sm-8.col-lg-9.mtb_20
+        // about
+        .row
+          .col-md-12
+            figure
+              img(src='images/about-page-gaando.jpg' alt='#')
+          .col-md-12
+            .about-text
+              .about-heading-wrap
+                h2.about-heading.mb_20.mt_40.ptb_10
+                  | OYEENok Design is Best Part of
+                  span my Life
+              p
+                | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&apos;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+              button.btn.mt_30(type='button') HIRE ME
+        // =====  product =====
+        .row
+          .col-md-6
+            .heading-part.mb_20.mt_40
+              h2.main_title What We Do?
+            #accordion.panel-group
+              .panel.panel-default.pull-left
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse' data-parent='#accordion' href='#collapseOne') 1. What is HTML?
+                #collapseOne.panel-collapse.collapse.in
+                  .panel-body
+                    p
+                      | HTML is a computer language devised to can then b the Internet. It is relatively easy to learn, with the basics being accessible.
+              .panel.panel-default.pull-left
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse' data-parent='#accordion' href='#collapseTwo') 2. What is Bootstrap?
+                #collapseTwo.panel-collapse.collapse
+                  .panel-body
+                    p
+                      | Bootstrap is the most popular HTML, CSS, and JS frameen I discovered Bootstrap a few was still gaining in popularity, addition to HTML, CSS and JS.
+              .panel.panel-default.pull-left
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse' data-parent='#accordion' href='#collapseThree') 3. What is CSS?
+                #collapseThree.panel-collapse.collapse
+                  .panel-body
+                    p
+                      | Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the procrt of a web page. Using CSS.
+          .col-md-6
+            .heading-part.mb_20.mt_40
+              h2.main_title Skills
+            #p_line
+              .progress
+                .progress-bar(role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: 60%;')
+                  span.sr-only 60% Complete
+                span.progress-type HTML / HTML5
+                span.progress-completed 60%
+              .progress
+                .progress-bar.progress-bar-success(role='progressbar' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100' style='width: 40%')
+                  span.sr-only 40% Complete (success)
+                span.progress-type ASP.Net
+                span.progress-completed 40%
+              .progress
+                .progress-bar.progress-bar-info(role='progressbar' aria-valuenow='20' aria-valuemin='0' aria-valuemax='100' style='width: 20%')
+                  span.sr-only 20% Complete (info)
+                span.progress-type Java
+                span.progress-completed 20%
+              .progress
+                .progress-bar.progress-bar-warning(role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: 60%')
+                  span.sr-only 60% Complete (warning)
+                span.progress-type JavaScript / jQuery
+                span.progress-completed 60%
+              .progress
+                .progress-bar.progress-bar-danger(role='progressbar' aria-valuenow='80' aria-valuemin='0' aria-valuemax='100' style='width: 80%')
+                  span.sr-only 80% Complete (danger)
+                span.progress-type CSS / CSS3
+                span.progress-completed 80%
+        // =====  end  =====
+        // Team Carousel
+        .heading-part.mb_10
+          h2.main_title.mt_50 Our Creative Team
+        .team_grid.box
+          .team3col.owl-carousel
+            .item.team-detail
+              .team-item-img
+                img(src='images/tm1.jpg' alt='')
+              .team-designation.mt_20 php Developer
+              h4.team-title.mtb_10 joseph Lui
+              p
+                | Lorem ipsum dolor sit amet, sea in odio erat, volumu Clita prodesset Rem ipsum dolor s..
+              ul.social.mt_20.mb_80
+                li
+                  a(href='https://www.facebook.com/' target='_blank')
+                    i.fa.fa-facebook
+                li
+                  a(href='https://www.twitter.com/' target='_blank')
+                    i.fa.fa-twitter
+                li
+                  a(href='https://www.dribbble.com/' target='_blank')
+                    i.fa.fa-dribbble
+                li
+                  a(href='https://www.pinterest.com/' target='_blank')
+                    i.fa.fa-pinterest
+                li
+                  a(href='https://www.behance.net/' target='_blank')
+                    i.fa.fa-behance
+            .item.team-detail
+              .team-item-img
+                img(src='images/tm2.jpg' alt='')
+              .team-designation.mt_20 php Developer
+              h4.team-title.mtb_10 joseph Lui
+              p
+                | Lorem ipsum dolor sit amet, sea in odio erat, volumu Clita prodesset Rem ipsum dolor s..
+              ul.social.mt_20.mb_80
+                li
+                  a(href='https://www.facebook.com/' target='_blank')
+                    i.fa.fa-facebook
+                li
+                  a(href='https://www.twitter.com/' target='_blank')
+                    i.fa.fa-twitter
+                li
+                  a(href='https://www.dribbble.com/' target='_blank')
+                    i.fa.fa-dribbble
+                li
+                  a(href='https://www.pinterest.com/' target='_blank')
+                    i.fa.fa-pinterest
+                li
+                  a(href='https://www.behance.net/' target='_blank')
+                    i.fa.fa-behance
+            .item.team-detail
+              .team-item-img
+                img(src='images/tm3.jpg' alt='')
+              .team-designation.mt_20 php Developer
+              h4.team-title.mtb_10 joseph Lui
+              p
+                | Lorem ipsum dolor sit amet, sea in odio erat, volumu Clita prodesset Rem ipsum dolor s..
+              ul.social.mt_20.mb_80
+                li
+                  a(href='https://www.facebook.com/' target='_blank')
+                    i.fa.fa-facebook
+                li
+                  a(href='https://www.twitter.com/' target='_blank')
+                    i.fa.fa-twitter
+                li
+                  a(href='https://www.dribbble.com/' target='_blank')
+                    i.fa.fa-dribbble
+                li
+                  a(href='https://www.pinterest.com/' target='_blank')
+                    i.fa.fa-pinterest
+                li
+                  a(href='https://www.behance.net/' target='_blank')
+                    i.fa.fa-behance
+            .item.team-detail
+              .team-item-img
+                img(src='images/tm4.jpg' alt='')
+              .team-designation.mt_20 php Developer
+              h4.team-title.mtb_10 joseph Lui
+              p
+                | Lorem ipsum dolor sit amet, sea in odio erat, volumu Clita prodesset Rem ipsum dolor s..
+              ul.social.mt_20.mb_80
+                li
+                  a(href='https://www.facebook.com/' target='_blank')
+                    i.fa.fa-facebook
+                li
+                  a(href='https://www.twitter.com/' target='_blank')
+                    i.fa.fa-twitter
+                li
+                  a(href='https://www.dribbble.com/' target='_blank')
+                    i.fa.fa-dribbble
+                li
+                  a(href='https://www.pinterest.com/' target='_blank')
+                    i.fa.fa-pinterest
+                li
+                  a(href='https://www.behance.net/' target='_blank')
+                    i.fa.fa-behance
+            .item.team-detail
+              .team-item-img
+                img(src='images/tm5.jpg' alt='')
+              .team-designation.mt_20 php Developer
+              h4.team-title.mtb_10 joseph Lui
+              p
+                | Lorem ipsum dolor sit amet, sea in odio erat, volumu Clita prodesset Rem ipsum dolor s..
+              ul.social.mt_20.mb_80
+                li
+                  a(href='https://www.facebook.com/' target='_blank')
+                    i.fa.fa-facebook
+                li
+                  a(href='https://www.twitter.com/' target='_blank')
+                    i.fa.fa-twitter
+                li
+                  a(href='https://www.dribbble.com/' target='_blank')
+                    i.fa.fa-dribbble
+                li
+                  a(href='https://www.pinterest.com/' target='_blank')
+                    i.fa.fa-pinterest
+                li
+                  a(href='https://www.behance.net/' target='_blank')
+                    i.fa.fa-behance
+          // End Team Carousel
+// Single Blog
+// End Blog
+// =====  CONTAINER END  =====
+// =====  FOOTER START  =====
+.footer.pt_60
+  .container
+    .row
+      .footer-top.pb_60.mb_30
+        .col-xs-12.col-sm-6
+          .footer-logo
+            a(href='index.html')
+              img(src='images/footer-logo.png' alt='OYEENok')
+          .footer-desc Lorem ipsum doLorem ipsum dolor sit amet, consectetur adipisicagna.
+        // =====  testimonial  =====
+        .col-xs-12.col-sm-6
+          .Testimonial
+            .client.owl-carousel
+              .item.client-detail
+                .client-avatar
+                  img(alt='' src='images/user1.jpg')
+                .client-title
+                  strong joseph Lui
+                .client-designation.mb_10  - php Developer
+                p
+                  i.fa.fa-quote-left(aria-hidden='true')
+                  | Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..
+              .item.client-detail
+                .client-avatar
+                  img(alt='' src='images/user2.jpg')
+                .client-title
+                  strong joseph Lui
+                .client-designation.mb_10  - php Developer
+                p
+                  i.fa.fa-quote-left(aria-hidden='true')
+                  | Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..
+              .item.client-detail
+                .client-avatar
+                  img(alt='' src='images/user3.jpg')
+                .client-title
+                  strong joseph Lui
+                .client-designation.mb_10  - php Developer
+                p
+                  i.fa.fa-quote-left(aria-hidden='true')
+                  | Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..
+        // =====  testimonial end =====
+    .row
+      .col-md-3.footer-block
+        h6.footer-title.ptb_20 Information
+        ul
+          li
+            a(href='#') About Us
+          li
+            a(href='#') Delivery Information
+          li
+            a(href='#') Privacy Policy
+          li
+            a(href='#') Terms &amp; Conditions
+          li
+            a(href='contact.html') Contact Us
+      .col-md-3.footer-block
+        h6.footer-title.ptb_20 Services
+        ul
+          li
+            a(href='#') Returns
+          li
+            a(href='#') Site Map
+          li
+            a(href='#') Wish List
+          li
+            a(href='#') My Account
+          li
+            a(href='#') Order History
+      .col-md-3.footer-block
+        h6.footer-title.ptb_20 Extras
+        ul
+          li
+            a(href='#') Brands
+          li
+            a(href='#') Gift Certificates
+          li
+            a(href='#') Affiliates
+          li
+            a(href='#') Specials
+          li
+            a(href='#') Newsletter
+      .col-md-3.footer-block
+        h6.footer-title.ptb_20 Contacts
+        ul
+          li Warehouse &amp; Offices, 12345 Street name, California USA
+          li
+            | (+123) 456 789
+            br
+            |  (+024) 666 888
+          li Contact@yourcompany.com
+  .footer-bottom.mt_60.ptb_20
+    .container
+      .row
+        .col-sm-4
+          .social_icon
+            ul
+              li
+                a(href='#')
+                  i.fa.fa-facebook
+              li
+                a(href='#')
+                  i.fa.fa-google
+              li
+                a(href='#')
+                  i.fa.fa-linkedin
+              li
+                a(href='#')
+                  i.fa.fa-twitter
+              li
+                a(href='#')
+                  i.fa.fa-rss
+        .col-sm-4
+          .copyright-part.text-center @ 2017 All Rights Reserved OYEENok
+        .col-sm-4
+          .payment-icon.text-right
+            ul
+              li
+                i.fa.fa-cc-paypal
+              li
+                i.fa.fa-cc-visa
+              li
+                i.fa.fa-cc-discover
+              li
+                i.fa.fa-cc-mastercard
+              li
+                i.fa.fa-cc-amex
+// =====  FOOTER END  =====
+a#scrollup
+script(src='js/jQuery_v3.1.1.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/bootstrap.min.js')
+script(src='js/jquery.magnific-popup.js')
+script(src='js/custom.js')

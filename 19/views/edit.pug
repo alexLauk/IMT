@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    h1 All Academy Courses
+    h1 All Academy courses
 
     form(method="post")
         fieldset.form-group
             label(for="name") Name:
-            input.form-control(name="name", type="text", id="name", placeholder="Enter name of course", value=course.name)
-            small.text-muted Add your new course
-        button.btn.btn-primary(type='submit') Save course
-        a.btn.btn-defoult(href="/courses") Cancel
+            input.form-control(name="name", type="text", id="name", "Enter courses name", value=course.name)
+            small.text-muted Add your courses
+        button.btn.btn-primary(type="submit") Save course
+        a.btn.btn-default(href="/courses") Cancel

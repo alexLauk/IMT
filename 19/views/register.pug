@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 Register
+
+    form(method='post')
+        .form-group
+            label(for='exampleInputName1') Name
+            input#exampleInputName1.form-control(type='name' name="userName" aria-describedby='emailName' placeholder='Enter Name' )
+            small#namelHelp.form-text.text-muted Use only first name
+        .form-group
+            label(for='exampleInputEmail1') Email address
+            input#exampleInputEmail1.form-control(type='email' name="userEmail" aria-describedby='emailHelp' placeholder='Enter email' )
+            small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+        .form-group
+            label(for='exampleInputPassword1') Password
+            input#exampleInputPassword1.form-control(type='password' name="userPass" placeholder='Password')
+        .form-group.form-check
+            input#exampleCheck1.form-check-input(type='checkbox')
+            label.form-check-label(for='exampleCheck1') Check me out
+        button.btn.btn-primary(type='submit') Submit
