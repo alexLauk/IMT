@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+
+    
+    <!--
+        Задание.
+        Используя jQuery реализуйте генерацию списка библиографии после статьи. Результат должен быть как на снимке "результат".
+        Снимок рядом с этим файлом
+    -->
+    
+    <script>
+        $(function () {
+
+            // рандомное число в заданом диапазоне
+            function getRandomInt(max) {
+                min = 0;
+                //max = 500;
+
+                return Math.floor(Math.random() * Math.floor(max));
+
+            }
+
+            function getRandomClass() {
+                const count = getRandomInt(11);
+
+                if (count > 5) {
+                    return 'red';
+                } else {
+                    return 'green';
+                }
+            }
+
+            function addBox() {
+                const wrap = $('.wrapper');
+                const widthWrap = wrap.innerWidth();
+                const heithWrap = wrap.innerHeight();
+                const div = $('<div class="box"></div>');
+                div.css('top', getRandomInt(heithWrap - 50)+ 'px').css('left', getRandomInt(widthWrap) + 'px').addClass(getRandomClass())
+
+                div.on('click', function() {
+                    if ($(this).hasClass('green')) {
+                        $(this).remove();
+                    } else {
+                        addBox();
+                        addBox();
+                    }
+                   
+            
+                });
+                wrap.append(div) 
+            }
+            
+
+        $('#add').on('click', addBox)
+
+    })
+        
+    </script>
+</head>
+<style>
+    .wrapper {
+        height: 600px;
+        width: 600px;
+        position: relative;
+        border: 1px dashed green;
+
+    }
+    .box {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+
+    }
+    .green {
+        background: green;
+    }
+    .red {
+        background: red;
+    }
+</style>
+
+<body>
+<!--
+    <div class="wrapper">
+    
+    <div class="content">
+        <div class="main">
+            <h1>Динамически созданная библиография</h1>
+            <p>Существует много фантастических веб-сайтов. <a href="http://www.yahoo.com/">Yahoo!</a> приходит на ум,
+                как и <a href="http://www.google.com/">Google</a>. Мало, кто забудет влияние, оказанное на культуру
+                сайтом <a href="http://www.hampsterdance.com/">Hampster Dance</a>.</p>
+        </div>
+    </div>
+</div>
+-->
+    <button id="add">add</button>
+    <div class="wrapper">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        $(function () {
+            $('form').submit(function (e) {
+                e.preventDefault();
+               // console.log($(this));
+                var body = {};
+                body.name = $(this).find('[name="name"]').val();
+                body.age = $(this).find('[name="age"]').val();
+                body.password = $(this).find('[name="password"]').val();
+
+                //console.log(name);
+                if(!body.name) {
+                    $(this).find('input[name="name"]').after('<span>Name doesn\'t exists</span>')
+                }
+
+            })
+
+            const user = {
+                name: 'Petro',
+                age: 34,
+                password: 12323
+            };
+
+            $('input[value="fill"]').click(function () {
+                $('input[name="name"]').val(user.name);
+                $('input[name="age"]').val(user.age);
+                $('input[name="password"]').val(user.password);
+            });
+
+            $('input[name="name"]').blur(function () {
+                if($('input[name="name"]').val()) {
+                    $('label').append('<span>Name doesn\'t exists</span>')
+                }
+            });
+
+            $('input[name="test"]').blur(function () {
+                //console.log($(this).val())
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+         
+            <input type="text" name="test" placeholder="enter">
+        </div>
+        <div>
+                 <input type="text" name="name">name
+                
+        </div>
+        <div>
+                <input type="number" name="age">Age
+        </div>
+        <div>
+                 <input type="password" name="password">password    
+        </div>
+        
+        <input type="button" value="fill">
+        <input type="submit" value="send">
+
+    </form>
+    
+</body>
+</html>
